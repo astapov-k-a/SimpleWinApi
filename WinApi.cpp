@@ -1,3 +1,10 @@
+/// @file WinApi.cpp
+/// @brief С‚Р®РРљ, РЇРќР”Р•РџР¤Р®Р«РҐР РџР•Р®РљРҐР“Р®Р–РҐРҐ РђРҐРђРљРҐРќР Р•Р™РҐ Р”РљРЄ РџР®РђРќР РЁ РЇ winapi - Р‘РЁР‘РќР”Р® РќР™РќРњ, Р™РќРњР РџРќРљРќР‘, РќРђРџР®РђРќР Р™РҐ РЇРќРђРЁР РҐР РҐ РћРџРќР’Р•Р¦Рќ
+/// @details СЏР РҐРљР­ Р™РќР”Р® - РћРќР’Р РҐ Google Code Style
+/// @author СЋРЇР Р®РћРќР‘ Р№РќРњРЇР Р®РњР РҐРњ (Astapov K.A.)
+/// @copyright Astapov K.A. Call (+7-931)-29-17-0-16 or mail to konstantinlancer@gmail.com if you want commercial use of this code
+/// @date 10.03.2016
+
 #include "stdafx.h"
 #include "WinApi.h"
 #include <iostream>
@@ -181,12 +188,12 @@ int ListView::SetColumns(int colNum, const String * header)
  
 void InitialiseCommonControls(DWORD ICC) {
   static DWORD mask = 0;
-  if ( (mask | ICC) != mask ) { //проверяем, была ли инициализация для этих флагов
+  if ( (mask | ICC) != mask ) { //ГЇГ°Г®ГўГҐГ°ГїГҐГ¬, ГЎГ»Г«Г  Г«ГЁ ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГї Г¤Г«Гї ГЅГІГЁГµ ГґГ«Г ГЈГ®Гў
     INITCOMMONCONTROLSEX icex;
     icex.dwSize = sizeof(INITCOMMONCONTROLSEX);
     icex.dwICC  = ICC;
     InitCommonControlsEx(&icex);  
-    mask = mask | ICC; //устанавливаем проинициализированные флаги
+    mask = mask | ICC; //ГіГ±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬ ГЇГ°Г®ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§ГЁГ°Г®ГўГ Г­Г­Г»ГҐ ГґГ«Г ГЈГЁ
   }
 }
 
@@ -213,8 +220,8 @@ bool ControlBody::Construct(HWND parent_handle_arg, Parent * parent_object_arg, 
   handle (hwnd);
   if ( !handle() ) return 0;
  
-  // Чтобы определялись строка (item) и столбец (subitem) обязательно устанавливаем
-  // расширенный стиль LVS_EX_FULLROWSELECT.
+  // Г—ГІГ®ГЎГ» Г®ГЇГ°ГҐГ¤ГҐГ«ГїГ«ГЁГ±Гј Г±ГІГ°Г®ГЄГ  (item) ГЁ Г±ГІГ®Г«ГЎГҐГ¶ (subitem) Г®ГЎГїГ§Г ГІГҐГ«ГјГ­Г® ГіГ±ГІГ Г­Г ГўГ«ГЁГўГ ГҐГ¬
+  // Г°Г Г±ГёГЁГ°ГҐГ­Г­Г»Г© Г±ГІГЁГ«Гј LVS_EX_FULLROWSELECT.
   //ListView_SetExtendedListViewStyleEx(hWndLV, 0, LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES);
  //(DWORD)SNDMSG((hwndLV), LVM_SETEXTENDEDLISTVIEWSTYLE, dwMask, dw)
   param.final_message.Send( handle() );
