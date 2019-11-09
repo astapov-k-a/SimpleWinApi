@@ -1,7 +1,7 @@
 /// @file WinApi.h
-/// @brief тЮИК, ЯНДЕПФЮЫХИ НОПЕДЕКЕМХЪ АХАКХНРЕЙХ ДКЪ ПЮАНРШ Я winapi - БШБНДЮ НЙНМ, ЙНМРПНКНБ, НАПЮАНРЙХ ЯНАШРХИ Х ОПНВЕЦН
-/// @details яРХКЭ ЙНДЮ - ОНВРХ Google Code Style
-/// @author юЯРЮОНБ йНМЯРЮМРХМ (Astapov K.A.)
+/// @brief Файл, содержащий определения библиотеки для работы с winapi - вывода окон, контролов, обработки событий и прочего
+/// @details Стиль кода - почти Google Code Style
+/// @author Астапов Константин (Astapov K.A.)
 /// @copyright Astapov K.A. Call (+7-931)-29-17-0-16 or mail to konstantinlancer@gmail.com if you want commercial use of this code
 /// @date 10.03.2016
 
